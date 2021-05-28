@@ -4,10 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-config/index.js
+
 # testing
 /coverage
-/config
+
 # next.js
 /.next/
 /out/
