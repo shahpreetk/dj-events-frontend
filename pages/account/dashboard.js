@@ -33,9 +33,13 @@ export default function DashboardPage({ events, token }) {
         <h1>Dashboard</h1>
         <h3>My Events</h3>
 
-        {events.map((evt) => (
-          <DashboardEvent key={evt.id} evt={evt} handleDelete={deleteEvent} />
-        ))}
+        {!events ? (
+          <p>Loading...</p>
+        ) : (
+          events.map((evt) => (
+            <DashboardEvent key={evt.id} evt={evt} handleDelete={deleteEvent} />
+          ))
+        )}
       </div>
     </Layout>
   );
